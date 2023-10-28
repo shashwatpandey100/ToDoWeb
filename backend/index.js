@@ -13,7 +13,7 @@ const app = express();
 app.use(cors(
     {
         origin: ["https://to-do-web-rho.vercel.app"],
-        methods: ["*"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
     }
 ));
