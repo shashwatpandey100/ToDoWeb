@@ -27,8 +27,11 @@ app.use((err, req, res, next) => {
 });
 
 const connectDB = async () => {
+
+    const connectionString = process.env.DB_CONNECTION_STRING
+
     try{
-        await mongoose.connect("mongodb+srv://shashwatpandeyy:ashleysexyback@todoapp.abl4tfl.mongodb.net/?retryWrites=true&w=majority");
+        await mongoose.connect(connectionString);
         console.log("MongoDB connected");
     }
     catch(err) {
