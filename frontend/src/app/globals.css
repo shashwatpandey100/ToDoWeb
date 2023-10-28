@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--bg: #ecf0f3;
+	--bgGrey: #f1f1f1;
+	--bgWhite: #f9f9f9;
+	--textColHd: #222527;
+	--textColSp: #4b4b4b;
+	--btnCol1: #ffd33c;
+	--btnCol2: #d1eaed;
+	--card1: #fdf2b3;
+	--card2: #d1eaee;
+	--card3: #fedada;
+	--card4: #ffd4a9;
+	--card5: #ecef8f;
+	--card6: #e8d6f7;
+	--blankCard: #ebebeb;
+}
+
+body {
+	background-color: var(--bg);
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: #454545;
+}
+
+input::placeholder,
+textarea::placeholder {
+	font-size: 14px;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #454545;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #454545;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #454545;
+}
+
+input::placeholder {
+	font-size: 14px;
+}
+textarea::placeholder {
+	font-size: 14px;
+}
+
+input {
+	color: rgb(85, 85, 85);
+	font-size: 14px;
+}
+
+textarea {
+	color: rgb(85, 85, 85);
+	font-size: 14px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #000;
+	transition: background-color 5000s ease-in-out 0s;
+	box-shadow: inset 0 0 20px 20px #00000000;
+}
+
+.newShadow {
+	box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #cdd6c7, 8px 8px 15px #afaaa7,
+		-8px -8px 15px #fff;
+}

@@ -1,0 +1,101 @@
+.loader {
+	--speed: 1200ms;
+	position: relative;
+	font-size: 2em;
+}
+
+.loader .tile {
+	width: 1em;
+	height: 1em;
+	animation: var(--speed) ease infinite jump;
+	transform-origin: 0 100%;
+	will-change: transform;
+}
+
+.loader .tile::before {
+	content: '';
+	display: block;
+	width: inherit;
+	height: inherit;
+	border-radius: 0.075em;
+	background-color: white;
+	animation: var(--speed) ease-out infinite spin;
+	will-change: transform;
+}
+
+.loader::after {
+	content: '';
+	display: block;
+	width: 1.1em;
+	height: 0.2em;
+	background-color: #0132;
+	border-radius: 60%;
+	position: absolute;
+	left: -0.05em;
+	bottom: -0.1em;
+	z-index: -1;
+	animation: var(--speed) ease-in-out infinite shadow;
+}
+
+@keyframes jump {
+	0% {
+		transform: scaleY(1) translateY(0);
+	}
+	15% {
+		transform: scaleY(0.4) translateY(0);
+	}
+	20% {
+		transform: scaleY(1.2) translateY(-10%);
+	}
+	25%,
+	60% {
+		transform: scaleY(1) translateY(-40%);
+	}
+	65% {
+		transform: scaleY(1.2) translateY(0);
+	}
+	75% {
+		transform: scaleY(0.5) translateY(0);
+	}
+	90% {
+		transform: scaleY(1) translateY(0);
+	}
+}
+
+@keyframes spin {
+	0%,
+	18% {
+		transform: rotate(0);
+		border-radius: 0.1em;
+	}
+	38% {
+		border-radius: 0.2em;
+	}
+	68%,
+	100% {
+		transform: rotate(1turn);
+		border-radius: 0.1em;
+	}
+}
+
+@keyframes shadow {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	15% {
+		transform: scale(1.15);
+	}
+	25%,
+	60% {
+		transform: scale(0.8);
+		opacity: 0.8;
+	}
+	75% {
+		transform: scale(1.15);
+		opacity: 1;
+	}
+	90% {
+		transform: scale(1);
+	}
+}
